@@ -1,1 +1,21 @@
-<p>drivers works!</p>
+<div class="table">
+  <h2>Водії</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Прізвище</th>
+        <th>Ім'я</th>
+        <th>По-батькові</th>
+        <th>Досвід</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let driver of drivers">
+        <td>{{ driver.lastName }}</td>
+        <td>{{ driver.firstName }}</td>
+        <td>{{ driver.middleName }}</td>
+        <td>{{ driver.experience }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
