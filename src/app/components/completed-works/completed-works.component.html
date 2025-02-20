@@ -1,31 +1,33 @@
-<h2>Виконані перевезення</h2>
-<table>
+<div class="table">
+  <h2>Виконані перевезення</h2>
+  <table>
     <thead>
-        <tr>
-            <th>Маршрут</th>
-            <th>Водії</th>
-            <th>Виїзд</th>
-            <th>Повернення</th>
-            <th>Оплата</th>
-            <th>Бонус</th>
-            <th>Сума</th>
-        </tr>
+      <tr>
+        <th>Маршрути</th>
+        <th>Водії</th>
+        <th>Виїзд</th>
+        <th>Повернення</th>
+        <th>Оплата</th>
+        <th>Премія</th>
+        <th>Кінцева оплата</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let work of completedWorks">
-            <td>{{ work.route?.name }}</td>
-            <td>
-                <ul>
-                    <li *ngFor="let driver of work.drivers">
-                        {{ driver.lastName }} {{ driver.firstName }}
-                    </li>
-                </ul>
-            </td>
-            <td>{{ work.departureDate | date:'short' }}</td>
-            <td>{{ work.returnDate | date:'short' }}</td>
-            <td>{{ work.route?.payment | currency }}</td>
-            <td>{{ work.paymentBonus | currency }}</td>
-            <td>{{ work.finalSum | currency }}</td>
-        </tr>
+      <tr *ngFor="let work of completedWorks">
+        <td>{{ work.route?.name }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let driver of work.drivers">
+              {{ driver.lastName }} {{ driver.firstName }}
+            </li>
+          </ul>
+        </td>
+        <td>{{ work.departureDate | date : "short" }}</td>
+        <td>{{ work.returnDate | date : "short" }}</td>
+        <td>{{ work.route?.payment | currency }}</td>
+        <td>{{ work.paymentBonus | currency }}</td>
+        <td>{{ work.finalSum | currency }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>
