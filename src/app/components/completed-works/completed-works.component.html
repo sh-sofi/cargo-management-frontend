@@ -5,8 +5,8 @@
       <tr>
         <th>Маршрути</th>
         <th>Водії</th>
-        <th>Виїзд</th>
-        <th>Повернення</th>
+        <th>Дата відправлення</th>
+        <th>Дата повернення</th>
         <th>Оплата</th>
         <th>Премія</th>
         <th>Кінцева оплата</th>
@@ -26,7 +26,13 @@
         <td>{{ work.returnDate | date : "short" }}</td>
         <td>{{ work.route?.payment | currency }}</td>
         <td>{{ work.paymentBonus | currency }}</td>
-        <td>{{ work.finalSum | currency }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let finalSum of work.finalSums">
+              {{ finalSum | currency }}
+            </li>
+          </ul>
+        </td>
       </tr>
     </tbody>
   </table>

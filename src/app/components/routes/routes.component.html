@@ -1,1 +1,21 @@
-<p>routes works!</p>
+<div class="table">
+  <h2>Маршрути</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Назва</th>
+        <th>Дальність</th>
+        <th>Кількість днів в дорозі</th>
+        <th>Оплата</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let route of routes">
+        <td>{{ route.name }}</td>
+        <td>{{ route.distance }}</td>
+        <td>{{ route.daysOnRoad }}</td>
+        <td>{{ route.payment }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -4,9 +4,9 @@ import { Driver } from './driver.model';
 export interface CompletedWork {
   id?: string;
   route: Route | null;
-  drivers: Driver[]; 
+  drivers: Driver[];
   departureDate: string;
   returnDate: string;
   paymentBonus: number;
-  finalSum: number;
+  finalSums: number[];
 }
