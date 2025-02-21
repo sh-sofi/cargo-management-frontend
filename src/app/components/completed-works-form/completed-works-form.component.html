@@ -1,0 +1,32 @@
+<h2>Додати нове перевезення</h2>
+<form [formGroup]="workForm" (ngSubmit)="submitForm()">
+  <label for="route">Маршрут:</label>
+  <select formControlName="route">
+    <option *ngFor="let route of routes" [ngValue]="route">
+      {{ route.name }} ({{ route.distance }} км)
+    </option>
+  </select>
+
+  <label for="drivers">Водії:</label>
+  <select formControlName="drivers" multiple>
+    <option *ngFor="let driver of drivers" [ngValue]="driver">
+      {{ driver.lastName }} {{ driver.firstName }}
+    </option>
+  </select>
+
+  <label for="departureDate">Дата відправлення:</label>
+  <input type="datetime-local" formControlName="departureDate" />
+
+  <label for="returnDate">Дата повернення:</label>
+  <input type="datetime-local" formControlName="returnDate" />
+
+  <label for="paymentBonus">Премія:</label>
+  <input type="number" formControlName="paymentBonus" />
+
+  <label for="finalSum">Кінцева оплата:</label>
+  <input type="number" formControlName="finalSums" />
+
+  <button type="submit" [disabled]="workForm.invalid">
+    Додати перевезення
+  </button>
+</form>

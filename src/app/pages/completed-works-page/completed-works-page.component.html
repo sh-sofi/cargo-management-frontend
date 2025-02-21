@@ -1,0 +1,11 @@
+<h2>Виконані перевезення</h2>
+
+<button (click)="toggleForm()">
+  {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
+</button>
+
+<div *ngIf="isFormVisible">
+  <app-completed-works-form></app-completed-works-form>
+</div>
+
+<app-completed-works></app-completed-works>
