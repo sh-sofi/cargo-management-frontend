@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="navbar-center">
+    <a routerLink="/">Головна</a>
+    <a routerLink="/routes">Маршрути</a>
+    <a routerLink="/drivers">Водії</a>
+    <a routerLink="/completed-works">Виконані перевезення</a>
+  </div>
+  <div class="logout-button">
+    <a *ngIf="authService.isAuthenticated()" (click)="logout()">Вийти</a>
+    <a *ngIf="!authService.isAuthenticated()" routerLink="/login">Увійти</a>
+  </div>
+</nav>

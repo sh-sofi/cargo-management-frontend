@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompletedWorksComponent } from './components/completed-works/completed-works.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,12 +17,23 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
+import { HttpClientModule } from '@angular/common/http';
+// import { AuthInterceptor } from './interceptors/auth.interceptor';
+
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'drivers', component: DriversComponent },
   { path: 'routes', component: RoutesComponent },
   { path: 'completed-works', component: CompletedWorksPageComponent },
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +43,9 @@ const routes: Routes = [
     RoutesComponent,
     CompletedWorksFormComponent,
     CompletedWorksPageComponent,
+    LoginComponent,
+    RegisterComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +60,6 @@ const routes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
