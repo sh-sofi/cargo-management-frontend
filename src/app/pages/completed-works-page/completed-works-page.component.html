@@ -1,11 +1,18 @@
 <h2>Виконані перевезення</h2>
 
-<button (click)="toggleForm()">
-  {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
-</button>
+<div *ngIf="!isLoggedIn">
+  <p>Увійдіть щоб додати нове перевезення</p>
+  <button (click)="redirectToLogin()">Увійти</button>
+</div>
 
-<div *ngIf="isFormVisible">
-  <app-completed-works-form></app-completed-works-form>
+<div *ngIf="isLoggedIn">
+  <button (click)="toggleForm()">
+    {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
+  </button>
+
+  <div *ngIf="isFormVisible">
+    <app-completed-works-form></app-completed-works-form>
+  </div>
 </div>
 
 <app-completed-works></app-completed-works>

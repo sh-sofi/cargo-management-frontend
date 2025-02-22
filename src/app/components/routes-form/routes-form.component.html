@@ -1,0 +1,16 @@
+<h2>Додати новий маршрут</h2>
+<form [formGroup]="workForm" (ngSubmit)="submitForm()">
+  <label for="name">Назва маршруту:</label>
+  <input type="text" formControlName="name" />
+
+  <label for="distance">Дальність (км):</label>
+  <input type="number" formControlName="distance" />
+
+  <label for="daysOnRoad">Кількість днів у дорозі:</label>
+  <input type="number" formControlName="daysOnRoad" />
+
+  <label for="payment">Оплата:</label>
+  <input type="number" formControlName="payment" />
+
+  <button type="submit" [disabled]="workForm.invalid">Додати маршрут</button>
+</form>

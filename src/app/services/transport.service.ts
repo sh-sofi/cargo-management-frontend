@@ -6,7 +6,7 @@ import { Driver } from '../models/driver.model';
 import { CompletedWork } from '../models/completed-work.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TransportService {
   private apiUrl = 'http://localhost:3000/api';
@@ -17,8 +17,16 @@ export class TransportService {
     return this.http.get<Route[]>(`${this.apiUrl}/routes`);
   }
 
+  addRoute(route: Route): Observable<Route> {
+    return this.http.post<Route>(`${this.apiUrl}/routes`, route);
+  }
+
   getDrivers(): Observable<Driver[]> {
     return this.http.get<Driver[]>(`${this.apiUrl}/drivers`);
+  }
+
+  addDriver(driver: Driver): Observable<Driver> {
+    return this.http.post<Driver>(`${this.apiUrl}/drivers`, driver);
   }
 
   getCompletedWorks(): Observable<CompletedWork[]> {

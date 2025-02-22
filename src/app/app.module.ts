@@ -23,14 +23,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DriversPageComponent } from './pages/drivers-page/drivers-page.component';
+import { RoutesPageComponent } from './pages/routes-page/routes-page.component';
+import { RoutesFormComponent } from './components/routes-form/routes-form.component';
+import { DriversFormComponent } from './components/drivers-form/drivers-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'drivers', component: DriversComponent },
-  { path: 'routes', component: RoutesComponent },
+  { path: 'drivers', component: DriversPageComponent },
+  { path: 'routes', component: RoutesPageComponent },
   { path: 'completed-works', component: CompletedWorksPageComponent },
 ];
 
@@ -46,6 +50,10 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
+    DriversPageComponent,
+    RoutesPageComponent,
+    RoutesFormComponent,
+    DriversFormComponent,
   ],
   imports: [
     BrowserModule,

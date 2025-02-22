@@ -1,0 +1,16 @@
+<h2>Додати нового водія</h2>
+<form [formGroup]="workForm" (ngSubmit)="submitForm()">
+  <label for="lastName">Прізвище:</label>
+  <input type="text" formControlName="lastName" />
+
+  <label for="firstName">Ім'я:</label>
+  <input type="string" formControlName="firstName" />
+
+  <label for="middleName">По батькові:</label>
+  <input type="string" formControlName="middleName" />
+
+  <label for="experience">Стаж (в роках):</label>
+  <input type="number" formControlName="experience" />
+
+  <button type="submit" [disabled]="workForm.invalid">Додати водія</button>
+</form>

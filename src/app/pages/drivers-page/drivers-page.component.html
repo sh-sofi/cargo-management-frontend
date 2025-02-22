@@ -1,0 +1,18 @@
+<h2>Водії</h2>
+
+<div *ngIf="!isLoggedIn">
+  <p>Увійдіть щоб додати нового водія</p>
+  <button (click)="redirectToLogin()">Увійти</button>
+</div>
+
+<div *ngIf="isLoggedIn">
+  <button (click)="toggleForm()">
+    {{ isFormVisible ? "Сховати форму" : "Додати нового водія" }}
+  </button>
+
+  <div *ngIf="isFormVisible">
+    <app-drivers-form></app-drivers-form>
+  </div>
+</div>
+
+<app-drivers></app-drivers>

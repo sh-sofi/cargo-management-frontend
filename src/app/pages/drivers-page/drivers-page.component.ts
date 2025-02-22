@@ -3,12 +3,12 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-completed-works-page',
+  selector: 'app-drivers-page',
   standalone: false,
-  templateUrl: './completed-works-page.component.html',
-  styleUrl: './completed-works-page.component.scss',
+  templateUrl: './drivers-page.component.html',
+  styleUrl: './drivers-page.component.scss',
 })
-export class CompletedWorksPageComponent {
+export class DriversPageComponent {
   isLoggedIn: boolean;
 
   constructor(private authService: AuthService, private router: Router) {
