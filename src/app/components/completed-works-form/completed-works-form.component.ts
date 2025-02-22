@@ -34,7 +34,8 @@ export class CompletedWorksFormComponent implements OnInit {
       departureDate: ['', Validators.required],
       returnDate: ['', Validators.required],
       paymentBonus: [0, [Validators.required, Validators.min(0)]],
-      finalSums: [[0], [Validators.required, Validators.min(0)]],
+      considerExperience: [false],
+      finalSums: [{ value: [0], disabled: true }, [Validators.required]],
     });
   }
 
@@ -51,6 +52,29 @@ export class CompletedWorksFormComponent implements OnInit {
     });
   }
 
+  updateFinalSum(): void {
+    const selectedRoute = this.workForm.value.route;
+    const bonus = this.workForm.value.paymentBonus || 0;
+    const considerExperience = this.workForm.value.considerExperience;
+    const drivers = this.workForm.value.drivers;
+
+    if (selectedRoute && drivers.length > 0) {
+      const basePayment = (selectedRoute.payment + bonus) / drivers.length;
+
+      let finalSums: number[] = drivers.map((driver: Driver) => {
+        let adjustedPayment = basePayment;
+
+        if (considerExperience) {
+          adjustedPayment += ((basePayment * 15) / 100) * driver.experience;
+        }
+
+        return Math.round(adjustedPayment);
+      });
+
+      this.workForm.patchValue({ finalSums });
+    }
+  }
+
   submitForm(): void {
     console.log('Перед відправленням:', this.workForm.value);
 
@@ -61,6 +85,7 @@ export class CompletedWorksFormComponent implements OnInit {
         ...this.workForm.value,
         route: this.workForm.value.route ? this.workForm.value.route._id : null,
         drivers: this.workForm.value.drivers.map((driver: any) => driver._id),
+        finalSums: this.workForm.getRawValue().finalSums,
       };
 
       console.log('Фінальний об’єкт:', formData);
