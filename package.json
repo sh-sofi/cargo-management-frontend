@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "author": "sh-sofi",
   "license": "MIT",
-  "description": "Cargo Management API",
+  "description": "Cargo Management",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
