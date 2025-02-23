@@ -10,6 +10,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+//Navbar component
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -51,7 +52,7 @@ body {
   .logout-btn {
     background-color: white;
     color: #0a2a5a;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   @media (max-width: 768px) {
@@ -75,6 +76,7 @@ body {
   }
 }
 
+//Home page
 .home-container {
   text-align: center;
   padding: 3rem;
@@ -107,6 +109,7 @@ body {
   }
 }
 
+//Footer component
 .footer {
   text-align: center;
   padding: 1rem;
@@ -127,6 +130,7 @@ body {
   }
 }
 
+//Login component
 .login-container {
   max-width: 400px;
   margin: 50px auto;
@@ -177,5 +181,50 @@ body {
 
   .full-width {
     font-size: 14px;
+  }
+}
+
+//Register component
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .redirect-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .link {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  .link:hover {
+    text-decoration: underline;
   }
 }
