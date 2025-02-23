@@ -1,16 +1,18 @@
-<h2>Виконані перевезення</h2>
+<h2 class="title">Виконані перевезення</h2>
 
-<div *ngIf="!isLoggedIn">
-  <p>Увійдіть щоб додати нове перевезення</p>
-  <button (click)="redirectToLogin()">Увійти</button>
+<div *ngIf="!isLoggedIn" class="auth-message">
+  <p>Увійдіть, щоб додати нове перевезення</p>
+  <button mat-raised-button color="primary" (click)="redirectToLogin()">
+    Увійти
+  </button>
 </div>
 
 <div *ngIf="isLoggedIn">
-  <button (click)="toggleForm()">
+  <button mat-raised-button color="accent" (click)="toggleForm()">
     {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
   </button>
 
-  <div *ngIf="isFormVisible">
+  <div *ngIf="isFormVisible" class="form-container">
     <app-completed-works-form></app-completed-works-form>
   </div>
 </div>

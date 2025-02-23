@@ -1,16 +1,32 @@
-<h2>Додати новий маршрут</h2>
-<form [formGroup]="workForm" (ngSubmit)="submitForm()">
-  <label for="name">Назва маршруту:</label>
-  <input type="text" formControlName="name" />
+<div class="form-container">
+  <form [formGroup]="workForm" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="outline">
+      <mat-label>Назва маршруту</mat-label>
+      <input matInput type="text" formControlName="name" />
+    </mat-form-field>
 
-  <label for="distance">Дальність (км):</label>
-  <input type="number" formControlName="distance" />
+    <mat-form-field appearance="outline">
+      <mat-label>Дальність (км)</mat-label>
+      <input matInput type="number" formControlName="distance" />
+    </mat-form-field>
 
-  <label for="daysOnRoad">Кількість днів у дорозі:</label>
-  <input type="number" formControlName="daysOnRoad" />
+    <mat-form-field appearance="outline">
+      <mat-label>Кількість днів у дорозі</mat-label>
+      <input matInput type="number" formControlName="daysOnRoad" />
+    </mat-form-field>
 
-  <label for="payment">Оплата:</label>
-  <input type="number" formControlName="payment" />
+    <mat-form-field appearance="outline">
+      <mat-label>Оплата</mat-label>
+      <input matInput type="number" formControlName="payment" />
+    </mat-form-field>
 
-  <button type="submit" [disabled]="workForm.invalid">Додати маршрут</button>
-</form>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="workForm.invalid"
+    >
+      Додати маршрут
+    </button>
+  </form>
+</div>

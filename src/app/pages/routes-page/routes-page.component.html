@@ -1,18 +1,22 @@
-<h2>Маршрути</h2>
+<div class="routes-container">
+  <h2>Маршрути</h2>
 
-<div *ngIf="!isLoggedIn">
-  <p>Увійдіть щоб додати новий маршрут</p>
-  <button (click)="redirectToLogin()">Увійти</button>
-</div>
-
-<div *ngIf="isLoggedIn">
-  <button (click)="toggleForm()">
-    {{ isFormVisible ? "Сховати форму" : "Додати новий маршрут" }}
-  </button>
-
-  <div *ngIf="isFormVisible">
-    <app-routes-form></app-routes-form>
+  <div *ngIf="!isLoggedIn" class="not-logged">
+    <p>Увійдіть, щоб додати новий маршрут</p>
+    <button mat-raised-button color="primary" (click)="redirectToLogin()">
+      Увійти
+    </button>
   </div>
-</div>
 
-<app-routes></app-routes>
+  <div *ngIf="isLoggedIn" class="logged-in">
+    <button mat-raised-button color="accent" (click)="toggleForm()">
+      {{ isFormVisible ? "Сховати форму" : "Додати новий маршрут" }}
+    </button>
+
+    <div *ngIf="isFormVisible">
+      <app-routes-form></app-routes-form>
+    </div>
+  </div>
+
+  <app-routes></app-routes>
+</div>

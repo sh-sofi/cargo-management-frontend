@@ -18,6 +18,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 import { HttpClientModule } from '@angular/common/http';
 // import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -73,6 +76,9 @@ const routes: Routes = [
     MatNativeDateModule,
     MatIconModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   bootstrap: [AppComponent],
 })
