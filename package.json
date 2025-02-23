@@ -1,6 +1,9 @@
 {
   "name": "cargo-management-frontend",
   "version": "0.0.0",
+  "author": "sh-sofi",
+  "license": "MIT",
+  "description": "Cargo Management API",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
