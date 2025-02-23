@@ -1,59 +1,85 @@
-# CargoManagementFrontend
+# Cargo Management
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Cargo Management is a web application built with Angular and Angular Material. It serves as the user interface for managing cargo transportation, providing authentication and CRUD operations for routes, drivers, and completed transportations.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+- [Features](#features)
+- [Instruction](#instruction)
+- [Usage](#usage)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Authentication & Authorization**: Implemented login and registration functionality.
+- **Navigation Panel**: Accessible menu for managing different sections.
+- **Home Page**: Welcome message with a call-to-action to explore completed transportation.
+- **Drivers Page**: Includes form for adding new drivers and list of existing drivers in db.
+- **Routes Page**: Includes form for adding new routes and list of existing routes in db.
+- **Completed Work Page**: Includes form for adding new completed works and list of existing completed works in db.
+- **Responsive Design**: Optimized for various screen sizes. Built with Angular Material.
 
-## Code scaffolding
+## Instruction
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This frontend interacts with the Cargo Management API. Ensure the backend is running and correctly configured in the environment settings.
+https://github.com/sh-sofi/cargo-management-backend.git
 
-```bash
-ng generate component component-name
-```
+1. Clone this repository:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   ```bash
+   git clone https://github.com/sh-sofi/cargo-management-frontend.git
+   cd cargo-management-frontend
+   ```
 
-```bash
-ng generate --help
-```
+2. Install dependencies:
 
-## Building
+   ```bash
+   npm install
+   ```
 
-To build the project run:
+3. Start the application:
+   ```bash
+   ng serve
+   ```
 
-```bash
-ng build
-```
+## Usage
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Open the app in your browser at http://localhost:4200.
 
-## Running unit tests
+Navigate through the pages: Home, Routes, Drivers, and Completed Works.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Use authentication features (e.g., Login) for restricted pages.
 
-```bash
-ng test
-```
+## Demo
 
-## Running end-to-end tests
+![Swagger Demo Screenshot](./public/demo_page1_01.png)
+![Swagger Demo Screenshot](./public/demo_page1_02.png)
+![Swagger Demo Screenshot](./public/demo_page1_03.png)
+![Swagger Demo Screenshot](./public/demo_page2_01.png)
+![Swagger Demo Screenshot](./public/demo_page2_02.png)
+![Swagger Demo Screenshot](./public/demo_page2_03.png)
 
-For end-to-end (e2e) testing, run:
+## Technologies Used
 
-```bash
-ng e2e
-```
+- **Front-end Framework**: Angular
+- **UI Library**: Angular Material
+- **State Management**: Services and Observables
+- **API Communication**: HTTP Client
+- **Routing**: Angular Router
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Contributing
 
-## Additional Resources
+This is a learning project, so contributions are not expected. However, feel free to fork and experiment with it. For suggestions or feedback, please open an issue.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+##
+
+Repository created during the course by TechMagic Academy "JavaScript Course".
+
+Special thanks to the course instructor for guidance and learning materials. 🙌
