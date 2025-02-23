@@ -1,12 +1,32 @@
-<nav class="navbar">
-  <div class="navbar-center">
-    <a routerLink="/">Головна</a>
-    <a routerLink="/routes">Маршрути</a>
-    <a routerLink="/drivers">Водії</a>
-    <a routerLink="/completed-works">Виконані перевезення</a>
+<nav mat-toolbar color="primary" class="navbar">
+  <div class="navbar-left">
+    <mat-icon>local_shipping</mat-icon>
+    <span class="project-name">Cargo Management</span>
+  </div>
+  <div class="navbar-links">
+    <a mat-button routerLink="/home">Головна</a>
+    <a mat-button routerLink="/routes">Маршрути</a>
+    <a mat-button routerLink="/drivers">Водії</a>
+    <a mat-button routerLink="/completed-works">Виконані перевезення</a>
   </div>
   <div class="logout-button">
-    <a *ngIf="authService.isAuthenticated()" (click)="logout()">Вийти</a>
-    <a *ngIf="!authService.isAuthenticated()" routerLink="/login">Увійти</a>
+    <button
+      mat-raised-button
+      color="accent"
+      class="logout-btn"
+      *ngIf="authService.isAuthenticated()"
+      (click)="logout()"
+    >
+      Вийти
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      class="login-btn"
+      *ngIf="!authService.isAuthenticated()"
+      routerLink="/login"
+    >
+      Увійти
+    </button>
   </div>
 </nav>
