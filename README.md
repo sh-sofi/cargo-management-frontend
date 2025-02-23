@@ -61,6 +61,8 @@ Use authentication features (e.g., Login) for restricted pages.
 ![Swagger Demo Screenshot](./public/demo_page2_01.png)
 ![Swagger Demo Screenshot](./public/demo_page2_02.png)
 ![Swagger Demo Screenshot](./public/demo_page2_03.png)
+![Swagger Demo Screenshot](./public/demo_page3_01.png)
+![Swagger Demo Screenshot](./public/demo_page4_01.png)
 
 ## Technologies Used
 
