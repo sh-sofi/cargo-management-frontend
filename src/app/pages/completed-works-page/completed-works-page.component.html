@@ -1,20 +1,26 @@
-<h2 class="title">Виконані перевезення</h2>
+<mat-card class="card-container">
+  <mat-card-content>
+    <h2>Виконані перевезення</h2>
 
-<div *ngIf="!isLoggedIn" class="auth-message">
-  <p>Увійдіть, щоб додати нове перевезення</p>
-  <button mat-raised-button color="primary" (click)="redirectToLogin()">
-    Увійти
-  </button>
-</div>
+    <div *ngIf="!isLoggedIn" class="auth-message">
+      <p>Увійдіть, щоб додати нове перевезення</p>
+      <button mat-raised-button color="primary" (click)="redirectToLogin()">
+        Увійти
+      </button>
+    </div>
 
-<div *ngIf="isLoggedIn">
-  <button mat-raised-button color="accent" (click)="toggleForm()">
-    {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
-  </button>
+    <div *ngIf="isLoggedIn">
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="toggleForm()">
+          {{ isFormVisible ? "Сховати форму" : "Додати нове перевезення" }}
+        </button>
+      </div>
 
-  <div *ngIf="isFormVisible" class="form-container">
-    <app-completed-works-form></app-completed-works-form>
-  </div>
-</div>
+      <div *ngIf="isFormVisible" class="form-container">
+        <app-completed-works-form></app-completed-works-form>
+      </div>
+    </div>
 
-<app-completed-works></app-completed-works>
+    <app-completed-works></app-completed-works>
+  </mat-card-content>
+</mat-card>

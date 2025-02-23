@@ -1,4 +1,4 @@
-// /* You can add global styles to this file, and also import other style files */
+// // /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
@@ -10,7 +10,7 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-//Navbar component
+// Navbar
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,7 @@ body {
   }
 }
 
-//Home page
+// Home page
 .home-container {
   text-align: center;
   padding: 3rem;
@@ -109,7 +109,7 @@ body {
   }
 }
 
-//Footer component
+// Footer
 .footer {
   text-align: center;
   padding: 1rem;
@@ -130,8 +130,9 @@ body {
   }
 }
 
-//Login component
-.login-container {
+// Login
+.login-container,
+.register-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -158,7 +159,8 @@ body {
     margin-bottom: 15px;
   }
 
-  .register-link {
+  .register-link,
+  .redirect-text {
     margin-top: 15px;
     font-size: 14px;
 
@@ -174,7 +176,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .login-container {
+  .login-container,
+  .register-container {
     max-width: 90%;
     padding: 15px;
   }
@@ -184,77 +187,14 @@ body {
   }
 }
 
-//Register component
-.register-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+// Driver Routes Works pages
+.card-container {
   text-align: center;
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .full-width {
-    width: 100%;
-  }
-
-  .register-btn {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .redirect-text {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-
-  .link {
-    color: #1976d2;
-    text-decoration: none;
-    font-weight: normal;
-  }
-
-  .link:hover {
-    text-decoration: underline;
-  }
-}
-
-//Routes page
-.routes-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-
-  h2 {
-    margin-bottom: 20px;
-  }
-
-  .add-route-btn {
-    margin-bottom: 20px;
-  }
 
   table {
-    width: 100%;
-    margin-top: 10px;
-    border-collapse: collapse;
-
     th,
     td {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ddd;
       text-align: center;
     }
@@ -262,37 +202,10 @@ body {
     th {
       background-color: #f5f5f5;
     }
-
-    th.mat-header-cell {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center !important;
-    }
-
-    .header-row th {
-      text-align: center;
-    }
-  }
-
-  .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
   }
 }
 
-// Drivers page
+.routes-container,
 .drivers-container {
   max-width: 800px;
   margin: 50px auto;
@@ -306,6 +219,7 @@ body {
     margin-bottom: 20px;
   }
 
+  .add-route-btn,
   .add-driver-btn {
     margin-bottom: 20px;
   }
@@ -317,20 +231,13 @@ body {
 
     th,
     td {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ddd;
       text-align: center;
     }
 
     th {
       background-color: #f5f5f5;
-    }
-
-    th.mat-header-cell {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center !important;
     }
 
     .header-row th {
@@ -355,11 +262,62 @@ body {
   }
 }
 
-// //Table (Routes, Completed Works, Drivers)
+.card-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
 table {
   mat-icon {
     cursor: pointer;
     font-size: 20px;
     transition: color 0.3s ease;
+
+    &:hover {
+      color: #1976d2;
+    }
   }
+}
+
+.card-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.auth-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
