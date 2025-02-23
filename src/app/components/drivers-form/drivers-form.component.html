@@ -1,16 +1,32 @@
-<h2>Додати нового водія</h2>
-<form [formGroup]="workForm" (ngSubmit)="submitForm()">
-  <label for="lastName">Прізвище:</label>
-  <input type="text" formControlName="lastName" />
+<div class="form-container">
+  <form [formGroup]="workForm" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="outline">
+      <mat-label>Прізвище</mat-label>
+      <input matInput type="text" formControlName="lastName" />
+    </mat-form-field>
 
-  <label for="firstName">Ім'я:</label>
-  <input type="string" formControlName="firstName" />
+    <mat-form-field appearance="outline">
+      <mat-label>Ім'я</mat-label>
+      <input matInput type="text" formControlName="firstName" />
+    </mat-form-field>
 
-  <label for="middleName">По батькові:</label>
-  <input type="string" formControlName="middleName" />
+    <mat-form-field appearance="outline">
+      <mat-label>По батькові</mat-label>
+      <input matInput type="text" formControlName="middleName" />
+    </mat-form-field>
 
-  <label for="experience">Стаж (в роках):</label>
-  <input type="number" formControlName="experience" />
+    <mat-form-field appearance="outline">
+      <mat-label>Стаж (в роках)</mat-label>
+      <input matInput type="number" formControlName="experience" />
+    </mat-form-field>
 
-  <button type="submit" [disabled]="workForm.invalid">Додати водія</button>
-</form>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="workForm.invalid"
+    >
+      Додати водія
+    </button>
+  </form>
+</div>

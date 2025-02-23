@@ -292,8 +292,8 @@ body {
   }
 }
 
-//Copmleted works page
-.completed-transports-container {
+// Drivers page
+.drivers-container {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
@@ -306,7 +306,7 @@ body {
     margin-bottom: 20px;
   }
 
-  .add-transport-btn {
+  .add-driver-btn {
     margin-bottom: 20px;
   }
 
@@ -352,5 +352,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+// //Table (Routes, Completed Works, Drivers)
+table {
+  mat-icon {
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s ease;
   }
 }

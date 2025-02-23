@@ -1,18 +1,22 @@
-<h2>Водії</h2>
+<div class="drivers-container">
+  <h2>Водії</h2>
 
-<div *ngIf="!isLoggedIn">
-  <p>Увійдіть щоб додати нового водія</p>
-  <button (click)="redirectToLogin()">Увійти</button>
-</div>
-
-<div *ngIf="isLoggedIn">
-  <button (click)="toggleForm()">
-    {{ isFormVisible ? "Сховати форму" : "Додати нового водія" }}
-  </button>
-
-  <div *ngIf="isFormVisible">
-    <app-drivers-form></app-drivers-form>
+  <div *ngIf="!isLoggedIn" class="not-logged">
+    <p>Увійдіть, щоб додати нового водія</p>
+    <button mat-raised-button color="primary" (click)="redirectToLogin()">
+      Увійти
+    </button>
   </div>
-</div>
 
-<app-drivers></app-drivers>
+  <div *ngIf="isLoggedIn" class="logged-in">
+    <button mat-raised-button color="accent" (click)="toggleForm()">
+      {{ isFormVisible ? "Сховати форму" : "Додати нового водія" }}
+    </button>
+
+    <div *ngIf="isFormVisible">
+      <app-drivers-form></app-drivers-form>
+    </div>
+  </div>
+
+  <app-drivers></app-drivers>
+</div>
