@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { HttpClientModule } from '@angular/common/http';
 // import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -27,6 +29,7 @@ import { DriversPageComponent } from './pages/drivers-page/drivers-page.componen
 import { RoutesPageComponent } from './pages/routes-page/routes-page.component';
 import { RoutesFormComponent } from './components/routes-form/routes-form.component';
 import { DriversFormComponent } from './components/drivers-form/drivers-form.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -54,6 +57,7 @@ const routes: Routes = [
     RoutesPageComponent,
     RoutesFormComponent,
     DriversFormComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,7 @@ const routes: Routes = [
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatIconModule,
   ],
   bootstrap: [AppComponent],
 })

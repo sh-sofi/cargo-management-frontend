@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
@@ -12,30 +12,118 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 0.5rem 1rem;
   background-color: #0a2a5a;
-  padding: 10px 20px;
-}
-
-.navbar-center {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-center a {
   color: white;
-  text-decoration: none;
-  font-size: 16px;
+  font-weight: normal;
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    mat-icon {
+      font-size: 24px;
+    }
+
+    .project-name {
+      font-size: 1.2rem;
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: normal;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .logout-btn {
+    background-color: white;
+    color: #0a2a5a;
+    font-weight: bold;
+  }
+
+  // Адаптація для мобільних
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+    .navbar-left {
+      margin-bottom: 0.5rem;
+    }
+
+    .navbar-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .logout-btn {
+      margin-top: 0.5rem;
+    }
+  }
 }
 
-.logout-button {
-  position: absolute;
-  right: 20px;
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+.home-container {
+  text-align: center;
+  padding: 3rem;
+  max-width: 90%;
+  margin: auto;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  .explore-btn {
+    margin-top: 1rem;
+    background-color: #0a2a5a;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: 0 auto 1rem;
+    border-top: 1px solid #ccc;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
