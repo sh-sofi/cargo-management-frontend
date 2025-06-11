@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-login',
   standalone: false,
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   email = '';
